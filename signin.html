@@ -1,0 +1,69 @@
+<html>
+<head>
+<title> SIGN IN </title>
+<script>
+function check(input) {
+if (input.value != document.getElementById('password').value) {
+input.setCustomValidity('Password Doesnot Match.');
+} else {
+input.setCustomValidity('');
+}
+}
+</script>
+</head>
+
+
+<body style= "background:black"
+>
+<h align="center"><b> <font color="white" size=6 face="Comic sans MS">&nbsp &nbsp &nbsp Sign IN </b></font> </h>
+</br></br>
+<form action="pzx.php" name="myform" onsubmit=" return validate(); "  method="post" >
+
+  <input type="text" placeholder="Enter First Name" name="fname" required autofocus > 
+	&nbsp
+	&nbsp
+<input type="text" placeholder="Enter Last Name*" name="lname" required>
+	</br>  </br>
+
+  <input type="varchar" placeholder="Enter Email*" name="email" required>
+&nbsp
+	&nbsp	
+    <input type="text" placeholder="Enter Contact Number" name="con" minlength="10" maxlength="10"required>
+</br>	</br>
+<input type="password" placeholder="Enter Password" name="password" id="password" required > 
+	&nbsp
+	&nbsp
+<input type="password" placeholder="Re-Enter Password" name="psw" oninput="check(this)" id="password_confirm" required>
+	</br>  </br>
+
+<font color="white" size=2 face="Comic sans MS">
+	<option value="fiat" selected>Select City: </option></font>
+<font color="white">
+<br><br>
+ <input type="radio" name="city" value="Mumbai" checked> Mumbai<br>
+  <input type="radio" name="city" value="Thane"> Thane<br>
+  <input type="radio" name="city" value="Aurangabad"> Aurangabad<br>
+ <input type="radio" name="city" value="Pune" > Pune<br>
+  <input type="radio" name="city" value="Nashik"> Nashik<br>
+  <input type="radio" name="city" value="Ahmadabad"> Ahmadabad<br>
+</font>
+</br>
+</br>
+    <input type="text" placeholder="Address" name="add" required>
+    
+&nbsp
+	&nbsp
+<br><br>
+    <input type="checkbox" checked="checked"><font color="white"> Remember me </font>
+    <p><font color="white">By creating an account you agree to our Terms & Privacy.</font></p>
+</br>	</br>
+
+     
+     &nbsp <input type="submit" value="Sign IN">
+	&nbsp 
+   
+
+
+
+</form>
+</body>
